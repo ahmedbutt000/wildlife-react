@@ -30,7 +30,8 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className="mt-0 sm:mt-0 lg:mt-[72px] ">
+      {/* Hero Section */}
       <section
         className={`relative w-full h-screen bg-cover bg-center ${
           theme === "dark" ? "bg-black" : "bg-white"
@@ -38,18 +39,18 @@ const Home = () => {
         style={heroStyles}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="relative z-10 flex items-center justify-center h-full text-center">
+        <div className="relative z-10 flex items-center justify-center h-full text-center px-4">
           <div>
-            <h1 className="text-5xl font-bold leading-tight mb-4 text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 text-white">
               Welcome to the Jacob Wildlife Centre
             </h1>
-            <p className="text-lg mb-6 text-white">
+            <p className="text-base sm:text-lg md:text-xl mb-6 text-white">
               Join us in safeguarding wildlife and creating a sustainable future
               for generations to come!
             </p>
             <Link
               to="/animals"
-              className="bg-yellow-400 text-black py-2 px-6 rounded-full text-lg hover:bg-yellow-500 transition duration-300"
+              className="bg-yellow-400 text-black py-2 px-6 rounded-full text-sm md:text-lg hover:bg-yellow-500 transition duration-300"
             >
               Explore Animals
             </Link>
@@ -57,15 +58,16 @@ const Home = () => {
         </div>
       </section>
 
+      {/* About Us Section */}
       <section
-        className={`py-16 text-center ${
+        className={`py-16 px-4 text-center ${
           theme === "dark"
             ? "bg-gray-800 text-white"
             : "bg-green-100 text-black"
         }`}
       >
-        <h2 className="text-3xl font-bold mb-4">About Us</h2>
-        <p className="text-lg max-w-3xl mx-auto">
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">About Us</h2>
+        <p className="text-sm md:text-base lg:text-lg max-w-3xl mx-auto">
           Jacob Wildlife Centre is more than just a sanctuary; it is a haven for
           endangered species and a platform for wildlife conservation and
           education. By visiting our center, you actively support our mission to
@@ -74,12 +76,13 @@ const Home = () => {
         </p>
       </section>
 
+      {/* Quick Links Section */}
       <section
-        className={`py-16 text-center ${
+        className={`py-16 px-4 text-center ${
           theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black"
         }`}
       >
-        <h2 className="text-3xl font-bold mb-8">Quick Links</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">Quick Links</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <QuickLink
             theme={theme}
@@ -111,8 +114,8 @@ const QuickLink = ({ theme, title, description, link }) => (
       theme === "dark" ? "bg-green-600" : "bg-green-600"
     } text-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300`}
   >
-    <h3 className="text-2xl font-semibold mb-4">{title}</h3>
-    <p className="text-lg mb-4">{description}</p>
+    <h3 className="text-xl md:text-2xl font-semibold mb-4">{title}</h3>
+    <p className="text-sm md:text-base lg:text-lg mb-4">{description}</p>
     <Link
       to={link}
       className="text-yellow-400 hover:text-yellow-500 transition duration-300"

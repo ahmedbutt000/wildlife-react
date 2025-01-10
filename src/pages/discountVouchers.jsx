@@ -55,7 +55,7 @@ const VoucherPage = () => {
 
   return (
     <div
-      className={`${
+      className={`mt-0 sm:mt-0 lg:mt-[72px]  ${
         theme === "dark" ? "bg-gray-800 text-white" : "bg-gray-100 text-black"
       } min-h-screen flex justify-center items-center p-6`}
     >
@@ -83,10 +83,10 @@ const VoucherPage = () => {
                   <h3 className="text-xl font-semibold text-yellow-600">
                     {voucher.code}
                   </h3>
-                  <p className="text-gray-700 dark:text-gray-300 mb-2">
+                  <p className="text-gray dark:text-white mb-2">
                     {voucher.description}
                   </p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                  <p className="text-sm text-grey dark:text-white">
                     Expiration Date: {voucher.expirationDate}
                   </p>
                   <button

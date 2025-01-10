@@ -30,7 +30,7 @@ const Animals = () => {
 
   return (
     <div
-      className={`py-8 px-4 ${
+      className={`mt-0 sm:mt-0 lg:mt-[72px] py-8 px-4 ${
         theme === "dark" ? "bg-gray-900 text-white" : "bg-gray-100 text-black"
       }`}
     >

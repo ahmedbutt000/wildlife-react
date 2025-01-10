@@ -30,7 +30,7 @@ const EventsPage = () => {
 
   return (
     <div
-      className={`${
+      className={`mt-0 sm:mt-0 lg:mt-[72px] ${
         theme === "dark" ? "bg-gray-800 text-white" : "bg-gray-100 text-black"
       } py-16 px-4`}
     >
