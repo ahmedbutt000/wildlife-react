@@ -88,20 +88,6 @@ const Signup = () => {
             Register
           </button>
         </form>
-
-        {/* Dog image display */}
-        <div className="mt-6 text-center">
-          {fetchError && <p className="text-red-500">{fetchError}</p>}
-          {dogImage ? (
-            <img
-              src={dogImage}
-              alt="Random Dog"
-              style={{ width: "300px", height: "auto", borderRadius: "8px" }}
-            />
-          ) : (
-            <p>Loading dog image...</p>
-          )}
-        </div>
       </div>
     </div>
   );
